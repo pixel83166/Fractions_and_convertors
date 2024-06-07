@@ -4,6 +4,7 @@ class Fraction:
         self.denominator = denominator
 
     def addition(self, term):  # метод сложения
+        """Метод сложения дробей."""
         first_action = float(term) * self.denominator
         second_action = float(first_action) + self.numerator
         third_act = float(second_action) / self.denominator
@@ -31,11 +32,11 @@ class Fraction:
     def get_numerator(self):  # посмотреть числительное
         return self.numerator
 
-    def set_denominator(self, set_number):  # управлять знаменателем
-        return set_number
+    def set_denominator(self, set_number):  # изменение знаменателя
+        self.denominator = set_number
 
-    def set_numerator(self, set_number):  # управлять числителем
-        return set_number
+    def set_numerator(self, set_number):  # изменение числителя
+        self.numerator = set_number
 
     def display(self):  # посмотреть пример
         return f"{self.numerator}/{self.denominator}"
@@ -71,5 +72,5 @@ class Translation_of_measures:  # Класс для конвертировани
         return float(kilometers) / 1.609
 
 
-proverka = Translation_of_measures().liters_to_gallons(20.8194)
+proverka = Fraction().addition(20.8194)
 print(proverka)
